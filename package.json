@@ -1,0 +1,54 @@
+{
+	"name": "comments-wiper",
+	"displayName": "comments-wiper",
+	"description": "Remove all comments from your code",
+	"version": "0.0.1",
+	"publisher": "Bruce",
+	"icon": "logo.png",
+	"engines": {
+		"vscode": "^1.43.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:extension.cwiper"
+	],
+	"main": "./extension.js",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/knowbee/cwiper-vscode-extension"
+	},
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.cwiper",
+				"title": "Remove All Comments"
+			}
+		],
+		"keybindings": [
+			{
+				"command": "extension.cwiper",
+				"key": "ctrl+alt+w",
+				"mac": "ctrl+alt+w",
+				"when": "editorTextFocus"
+			}
+		]
+	},
+	"scripts": {
+		"lint": "eslint .",
+		"pretest": "yarn run lint",
+		"test": "node ./test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/glob": "^7.1.1",
+		"@types/mocha": "^7.0.1",
+		"@types/node": "^12.11.7",
+		"@types/vscode": "^1.43.0",
+		"eslint": "^6.8.0",
+		"glob": "^7.1.6",
+		"mocha": "^7.0.1",
+		"typescript": "^3.7.5",
+		"vscode-test": "^1.3.0"
+	}
+}
