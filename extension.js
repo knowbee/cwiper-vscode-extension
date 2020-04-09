@@ -10,7 +10,7 @@ let editor = vscode.window.activeTextEditor;
 function activate(context) {
   let disposable = vscode.commands.registerCommand(
     "extension.cwiper",
-    function() {
+    function () {
       const re_single_line_comments = /(\/\/)\s*.*/gm; // comments like this (//)
       const re_empty_lines = /^\s*[\r\n]/gm;
       const re_multiline_comments = /(\{\/\*|(\/\*)).*(\*\/\}|(\*\/))/gm; //comments like {/* */} or /* */
@@ -35,7 +35,7 @@ function activate(context) {
           .replace(re_html, "")
           .replace(re_empty_lines, "")
       );
-      vscode.window.showInformationMessage("now your it all looks clean");
+      vscode.window.showInformationMessage("Yay!, Looking very clean.");
     }
   );
 
@@ -48,5 +48,5 @@ function deactivate() {}
 
 module.exports = {
   activate,
-  deactivate
+  deactivate,
 };

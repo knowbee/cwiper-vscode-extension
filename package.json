@@ -2,7 +2,7 @@
 	"name": "comments-wiper",
 	"displayName": "comments-wiper",
 	"description": "Remove all comments from your code",
-	"version": "0.0.1",
+	"version": "0.1.1",
 	"publisher": "Bruce",
 	"icon": "logo.png",
 	"engines": {
